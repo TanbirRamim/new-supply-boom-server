@@ -96,10 +96,10 @@ async function run() {
     });
 
     app.put("/user/:email", async (req, res) => {
-      // const email = req.params.email;
-      // const user = req.body;
-      // const filter = { email: email };
-      // const options = { upsert: true };
+      const email = req.params.email;
+      const user = req.body;
+      const filter = { email: email };
+      const options = { upsert: true };
       const updateDoc = {
         $set: user,
       };
@@ -128,3 +128,4 @@ app.get("/hero", (req, res) => {
 app.listen(port, () => {
   console.log("supply-boom is running", port);
 });
+//--------The End--------//
