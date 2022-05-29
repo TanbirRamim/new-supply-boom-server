@@ -85,15 +85,15 @@ async function run() {
       const orders = await cursor.toArray();
       res.send(orders);
     });
-    // app.post("/orders", async (req, res) => {
-    //   const order = req.body;
-    //   const result = await orderCollection.insertOne(order);
-    //   res.send(result);
-    // });
-    app.get("/user", async (req, res) => {
-      const users = await userCollection.find().toArray();
-      res.send(users);
+    app.post("/orders", async (req, res) => {
+      const order = req.body;
+      const result = await orderCollection.insertOne(order);
+      res.send(result);
     });
+    // app.get("/user", async (req, res) => {
+    //   const users = await userCollection.find().toArray();
+    //   res.send(users);
+    // });
 
     app.put("/user/:email", async (req, res) => {
       const email = req.params.email;
