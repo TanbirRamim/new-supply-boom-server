@@ -40,8 +40,8 @@ async function run() {
     const orderCollection = client.db("Supply-Boom").collection("orders");
     const userCollection = client.db("Supply-Boom").collection("users");
 
-    GET;
-    TOOL;
+    // GET;
+    // TOOL;
     app.get("/tool", async (req, res) => {
       const query = {};
       const cursor = toolsCollection.find(query);
