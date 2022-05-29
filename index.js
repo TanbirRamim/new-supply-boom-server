@@ -57,19 +57,19 @@ async function run() {
     });
 
     //REVIEW
-    // app.get("/review", async (req, res) => {
-    //   const query = {};
-    //   const cursor = reviewCollection.find(query);
-    //   const reviews = await cursor.toArray();
-    //   res.send(reviews);
-    // });
+    app.get("/review", async (req, res) => {
+      const query = {};
+      const cursor = reviewCollection.find(query);
+      const reviews = await cursor.toArray();
+      res.send(reviews);
+    });
 
     //tool //POST
-    app.post("/tool", async (req, res) => {
-      const newTool = req.body;
-      const result = await toolsCollection.insertOne(newTool);
-      res.send(result);
-    });
+    // app.post("/tool", async (req, res) => {
+    //   const newTool = req.body;
+    //   const result = await toolsCollection.insertOne(newTool);
+    //   res.send(result);
+    // });
     //review
     app.post("/review", async (req, res) => {
       const newReview = req.body;
