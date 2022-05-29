@@ -34,11 +34,11 @@ function verifyJWT(req, res, next) {
 
 async function run() {
   try {
-    await client.connect();
-    const toolsCollection = client.db("Supply-Boom").collection("Tools");
-    const reviewCollection = client.db("Supply-Boom").collection("Reviews");
-    const orderCollection = client.db("Supply-Boom").collection("orders");
-    const userCollection = client.db("Supply-Boom").collection("users");
+    // await client.connect();
+    // const toolsCollection = client.db("Supply-Boom").collection("Tools");
+    // const reviewCollection = client.db("Supply-Boom").collection("Reviews");
+    // const orderCollection = client.db("Supply-Boom").collection("orders");
+    // const userCollection = client.db("Supply-Boom").collection("users");
 
     //GET
     // TOOL
