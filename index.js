@@ -90,16 +90,16 @@ async function run() {
       const result = await orderCollection.insertOne(order);
       res.send(result);
     });
-    // app.get("/user", async (req, res) => {
-    //   const users = await userCollection.find().toArray();
-    //   res.send(users);
-    // });
+    app.get("/user", async (req, res) => {
+      const users = await userCollection.find().toArray();
+      res.send(users);
+    });
 
     app.put("/user/:email", async (req, res) => {
-      const email = req.params.email;
-      const user = req.body;
-      const filter = { email: email };
-      const options = { upsert: true };
+      // const email = req.params.email;
+      // const user = req.body;
+      // const filter = { email: email };
+      // const options = { upsert: true };
       const updateDoc = {
         $set: user,
       };
