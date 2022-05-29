@@ -1,10 +1,10 @@
-// const express = require("express");
-// const cors = require("cors");
-// const jwt = require("jsonwebtoken");
-// require("dotenv").config();
-// const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-// const app = express();
-// const port = process.env.PORT || 5000;
+const express = require("express");
+const cors = require("cors");
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+const app = express();
+const port = process.env.PORT || 5000;
 
 //middleware
 app.use(cors());
@@ -85,11 +85,11 @@ async function run() {
       const orders = await cursor.toArray();
       res.send(orders);
     });
-    app.post("/orders", async (req, res) => {
-      const order = req.body;
-      const result = await orderCollection.insertOne(order);
-      res.send(result);
-    });
+    // app.post("/orders", async (req, res) => {
+    //   const order = req.body;
+    //   const result = await orderCollection.insertOne(order);
+    //   res.send(result);
+    // });
     app.get("/user", async (req, res) => {
       const users = await userCollection.find().toArray();
       res.send(users);
