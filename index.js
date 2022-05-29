@@ -34,14 +34,14 @@ function verifyJWT(req, res, next) {
 
 async function run() {
   try {
-    // await client.connect();
-    // const toolsCollection = client.db("Supply-Boom").collection("Tools");
-    // const reviewCollection = client.db("Supply-Boom").collection("Reviews");
-    // const orderCollection = client.db("Supply-Boom").collection("orders");
-    // const userCollection = client.db("Supply-Boom").collection("users");
+    await client.connect();
+    const toolsCollection = client.db("Supply-Boom").collection("Tools");
+    const reviewCollection = client.db("Supply-Boom").collection("Reviews");
+    const orderCollection = client.db("Supply-Boom").collection("orders");
+    const userCollection = client.db("Supply-Boom").collection("users");
 
-    //GET
-    // TOOL
+    GET;
+    TOOL;
     app.get("/tool", async (req, res) => {
       const query = {};
       const cursor = toolsCollection.find(query);
@@ -57,12 +57,12 @@ async function run() {
     });
 
     //REVIEW
-    app.get("/review", async (req, res) => {
-      const query = {};
-      const cursor = reviewCollection.find(query);
-      const reviews = await cursor.toArray();
-      res.send(reviews);
-    });
+    // app.get("/review", async (req, res) => {
+    //   const query = {};
+    //   const cursor = reviewCollection.find(query);
+    //   const reviews = await cursor.toArray();
+    //   res.send(reviews);
+    // });
 
     //tool //POST
     app.post("/tool", async (req, res) => {
